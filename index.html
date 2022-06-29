@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Rock Paper Scissors</title>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header id="header-container">
+        <h1 id="header-text">Rock Paper Scissors!</h1>
+    </header>
+    <div id="container">
+        <div id="main">
+            <!--Player-->
+            <div class="player-container">
+                <div class="player-text">
+                    <h2>Player</h2>
+                </div>
+                <div class="choices">
+                    <button id="rock" class="p-btns btns">Rock</button>
+                    <button id="paper" class="p-btns btns">Paper</button>
+                    <button id="scissors" class="p-btns btns">Scissors</button>
+                </div>
+                <div class="output-container">
+                    <div class="player-output">???</div> 
+                </div>
+                <div class="score-container">
+                    <div class="player-score-information"></div> 
+                </div>
+            </div>
+
+            <div class="scoreboard-container">
+                <div class="wlt-container">
+                    <h2 class="wlt-text"></h2> 
+                </div>
+                <div class="overall-scoreboard">
+                    <div class="player-overall-score">0</div> <!--remove the value later-->
+                    <span> : </span>
+                    <div class="computer-overall-score">0</div> <!--remove the value later-->
+                </div>
+                <div class="play-again-container">
+                    <button class="play-again-btn">RESTART</button>
+                </div>
+            </div>
+
+            <!--Computer-->
+            <div class="computer-container">
+                <div class="computer-text">
+                    <h2>Computer</h2>
+                </div>
+                <div class="choices">
+                    <button class="btns">???</button>
+                    <button class="btns">???</button>
+                    <button class="btns">???</button>
+                </div>
+                <div class="output-container">
+                    <div class="computer-output">???</div>
+                </div>
+                <div class="score-container">
+                    <div class="computer-score-information"></div> <!--remove the value later-->
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <footer>Made by&nbsp;<a href="https://github.com/marcelee0713">Marcelee</a></footer>
+</body>
+</html>
