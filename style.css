@@ -125,3 +125,68 @@ footer a{
 footer a:hover{
   text-decoration: underline;
 }
+@media only screen and (max-width: 87.5em){
+  #header-text{
+    font-size: 3.5em;
+  }
+  #container{
+    padding: 5em;
+  }
+  .choices .btns{
+    width: 125px;
+    height: 40px;
+    font-size: 1.2em;
+  }
+  .play-again-btn{
+    width: 125px;
+    height: 40px;
+    font-size: 1.2em;
+  }
+  .player-output,.computer-output{
+    font-size: 9em;
+  }
+}
+@media only screen and (max-width: 66.5625em){
+  #container{
+    padding: 2em;
+  }
+  #main{
+    flex-direction: column;
+    gap: 10px;
+  }
+  .scoreboard-container{
+    margin-bottom: 10px;
+  }
+  .player-output,.computer-output{
+    font-size: 5em;
+  }
+  .output-container{
+    min-height: 0;
+  }
+}
+@media only screen and (max-width: 33.125em){
+  #container{
+    padding: 1em;
+  }
+  #header-text{
+    font-size: 2em;
+  }
+  #main{
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .choices .btns{
+    width: 90px;
+    height: 30px;
+    font-size: 1em;
+  }
+  .play-again-btn{
+    width: 90px;
+    height: 30px;
+    font-size: 1em;
+  }
+  .player-output,.computer-output{
+    font-size: 4.0em;
+  }
+}
+
