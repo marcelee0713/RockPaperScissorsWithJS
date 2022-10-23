@@ -17,6 +17,10 @@ let playAgainButton = document.querySelector('.play-again-btn');
 let playerScore = 0;
 let computerScore = 0;
 
+let totalRounds = 0;
+const openModal = document.querySelector('#open-modal');
+const decision = document.querySelector("#decision");
+const restartBtn = document.querySelector("#restart-btn");
 choices.forEach(choice => choice.addEventListener('click', play));
 function getComputerChoice(){
     let result = "";
@@ -38,14 +42,21 @@ function showWinner(winner){
         playerScore++;
         winOrLose.textContent = 'You Win';
         playerTotalScore.textContent = playerScore;
+        totalRounds++;
     }
     else if(winner === "computer"){
         computerScore++;
         winOrLose.textContent = 'You Lose';
         computerTotalScore.textContent = computerScore;
+        totalRounds++;
     }
     else if(winner === "tie"){
         winOrLose.textContent = 'Draw';
+        totalRounds++;
+    }
+
+    if(totalRounds === 5){
+        showModal();
     }
 }
 
@@ -110,15 +121,30 @@ function playRound(player, computer){
 }
 
 playAgainButton.addEventListener('click', restartButton);
+restartBtn.addEventListener('click', restartButton);
 
 function restartButton(e){
     playerScore = 0;
     computerScore = 0;
+    totalRounds = 0;
     playerTotalScore.textContent = '0';
     computerTotalScore.textContent = '0';
     winOrLose.textContent = '';
     displayOutput.textContent = '???';
     displayCPUOutput.textContent = '???';
+    openModal.style.display = "none";
+}
 
+function showModal(){
+    openModal.style.display = "flex";
+    if(playerScore > computerScore){
+        decision.textContent = "PLAYER WON!"
+    }
+    else if(computerScore > playerScore){
+        decision.textContent = "COMPUTER WON!"
+    }
+    else{
+        decision.textContent = "DRAW";
+    }
 }
 
